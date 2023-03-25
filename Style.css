@@ -1,0 +1,15 @@
+.sideItem {
+    transition: background-color 0.3s ease;
+}
+
+.sideItem:hover {
+    background-color: rgb(108, 117, 125) !important;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
