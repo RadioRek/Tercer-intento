@@ -1,3 +1,9 @@
+.customContainer {
+    background-image: url('Background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .sideItem {
     transition: background-color 0.3s ease;
 }
@@ -9,6 +15,7 @@
 a {
     text-decoration: none;
 }
+
 ul {
     list-style-type: none;
     padding: 0;

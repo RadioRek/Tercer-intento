@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <div class="d-flex m-0 p-0">
-
+    <div class="d-flex m-0 p-0 overflow-hidden">
         <!-- sidebar -->
         <div class="d-flex p-0 m-0">
             <div class="container-fluid bg-dark text-center position-static">
@@ -41,8 +40,9 @@
         </div>
         <!-- fin sidebar -->
 
-        <!-- navbar -->
-        <div class="container p-0 m-0  vh-100 bg-secondary">
+        <div class="container p-0 m-0 bg-secondary customContainer">
+
+            <!-- navbar -->
             <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Home</a>
@@ -62,127 +62,72 @@
                                 <a class="nav-link" href="#">Pricing</a>
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-secondary btn-sm mx-3">Log in</button>
-                        <button type="button" class="btn btn-secondary btn-sm">Sign in</button>
                     </div>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-secondary" type="submit">Search</button>
-                    </form>
-
+                    <button type="button" class="btn btn-secondary btn-sm">Log in</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Sign in</button>
                 </div>
             </nav>
             <!-- fin navbar -->
 
             <!-- cards -->
-            <div class="container py-2">
+            <div class="container overflow-auto pt-2">
 
-                <div class="row row-cols-6">
-                    <div class="col">
-                        <div class="card text-bg-dark mb-2" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                <!-- featured content -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card text-center text-bg-dark mb-2 w-75 mx-auto bg-opacity-75">
+                            <div class="card-header">
+                                Nasty is here!
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-bg-dark" style="max-width: 18rem;">
-                            <img src="Nasty.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title">We bring new e-liquids</h5>
+                                <img src="Featured.jpeg" alt="" class="img-fluid">
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ad
+                                    voluptatem exercitationem incidunt, atque sequi autem voluptate natus quos est
+                                    itaque
+                                    accusantium debitis numquam expedita libero provident, quae doloribus ut.</p>
+                                <a href="#" class="btn btn-secondary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--  fin featured content -->
 
+                <!-- best sellers -->
+                <h1 class="h1 text-center text-bg-dark bg-opacity-75 rounded-3">Best sellers</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card text-center text-bg-dark bg-opacity-75">
+                            <img src="Nasty.png" class="card-img-top img-fluid w-50 mx-auto pt-2" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+                                    libero maxime laudantium, minus autem laborum vero doloremque dicta? Cupiditate
+                                    nulla doloribus modi nobis cumque iste reiciendis alias minus, suscipit similique.
+                                </p>
+                                <button type="button" class="btn btn-secondary">Secondary</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card text-center text-bg-dark bg-opacity-75">
+                            <img src="Nasty.png" class="card-img-top img-fluid w-50 mx-auto pt-2" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+                                    aut qui, cum illum soluta beatae cumque! Error vero voluptatem consectetur
+                                    provident! Voluptates alias impedit quidem consequuntur qui esse libero ratione.
+                                </p>
+                                <button type="button" class="btn btn-secondary">Secondary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin best sellers -->
             </div>
-
-
         </div>
     </div>
 
