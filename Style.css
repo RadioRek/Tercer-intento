@@ -1,9 +1,18 @@
-.customContainer {
-    background-image: url('Background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/* index style */
 
+/* fin index style */
+
+/* shop style */
+.shopArea {
+    background-image: url('nastyGif.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.customSidebar {
+    width: 25%;
+    min-width: 20%;
+}
 .sideItem {
     transition: background-color 0.3s ease;
 }
@@ -11,12 +20,39 @@
 .sideItem:hover {
     background-color: rgb(108, 117, 125) !important;
 }
+/* obtained from web */
+.pagination .page-link {
+    color: #fff;
+    background-color: rgba(52, 58, 64, 0.8);
+    border-color: rgba(52, 58, 64, 0.8);
+  }
+  
+  .pagination .page-link:hover {
+    background-color: rgba(96, 96, 96, 0.8);
+    border-color: rgba(96, 96, 96, 0.8);
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: rgba(96, 96, 96, 0.8);
+    border-color: rgba(96, 96, 96, 0.8);
+  }
+/* fin obtained from web */
+/* fin shop style */
 
+/* used in many places */
+.customContainer {
+    background-image: url('Background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* fin used in many places */
+
+/* removing styles */
 a {
     text-decoration: none;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
 }
+/* fin removing styles */
