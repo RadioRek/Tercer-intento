@@ -20,6 +20,31 @@
 .sideItem:hover {
     background-color: rgb(108, 117, 125) !important;
 }
+
+.myCardBlack {
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3 ease;
+    color: whitesmoke;
+    background-color: rgba(33,37,41,0.75);
+    cursor: pointer;
+}
+.myCardBlack:hover {
+    background-color: rgba(33,37,41,1);
+    box-shadow: 0.3rem 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
+.myCardGrey {
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3 ease;
+    color: whitesmoke;
+    background-color: rgba(108,117,125,0.75);
+    cursor: pointer;
+}
+.myCardGrey:hover {
+    background-color: rgba(108,117,125,1);
+    box-shadow: 0.3rem 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
 /* obtained from web */
 .pagination .page-link {
     color: #fff;
