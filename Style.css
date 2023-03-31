@@ -4,7 +4,7 @@
 
 /* shop style */
 .shopArea {
-    background-image: url('nastyGif.gif');
+    background-image: url('Resources/nastyGif.gif');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -23,26 +23,26 @@
 
 .myCardBlack {
     transition: background-color 0.3s ease;
-    transition: box-shadow 0.3 ease;
+    transition: box-shadow 0.5 ease;
     color: whitesmoke;
     background-color: rgba(33,37,41,0.75);
     cursor: pointer;
 }
 .myCardBlack:hover {
     background-color: rgba(33,37,41,1);
-    box-shadow: 0.3rem 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0.3rem 0.5rem 0.8rem rgba(139,0,139, 0.75);
 }
 
 .myCardGrey {
     transition: background-color 0.3s ease;
-    transition: box-shadow 0.3 ease;
+    transition: box-shadow 0.5 ease;
     color: whitesmoke;
     background-color: rgba(108,117,125,0.75);
     cursor: pointer;
 }
 .myCardGrey:hover {
     background-color: rgba(108,117,125,1);
-    box-shadow: 0.3rem 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0.3rem 0.5rem 0.8rem rgba(139,0,139, 0.75);
 }
 
 /* obtained from web */
@@ -66,11 +66,24 @@
 
 /* used in many places */
 .customContainer {
-    background-image: url('Background.webp');
+    background-image: url('Resources/Background.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
 /* fin used in many places */
+
+/* not asigned */
+textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.myInput:focus {
+    box-shadow: 0rem 0.5rem 0.5rem rgba(139,0,139, 0.75);
+    border-color: rgb(139,0,139);
+}
+/* fin not asigned */
+
 
 /* removing styles */
 a {
