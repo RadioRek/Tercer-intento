@@ -2,6 +2,16 @@
 
 /* fin index style */
 
+/* contact us style */
+textarea {
+    height: 20rem;
+    resize: none;
+}
+
+
+/* fin contact us style */
+
+
 /* shop style */
 .shopArea {
     background-image: url('Resources/nastyGif.gif');
@@ -73,10 +83,7 @@
 /* fin used in many places */
 
 /* not asigned */
-textarea {
-    height: 20rem;
-    resize: none;
-}
+
 
 .myInput:focus {
     box-shadow: 0rem 0.5rem 0.5rem rgba(139,0,139, 0.75);
