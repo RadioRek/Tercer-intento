@@ -8,7 +8,6 @@ textarea {
     resize: none;
 }
 
-
 /* fin contact us style */
 
 
@@ -79,21 +78,14 @@ textarea {
 /* fin obtained from web */
 /* fin shop style */
 
-/* used in many places */
-.customContainer {
-    background-image: url('Resources/Background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* fin used in many places */
 
-/* not asigned */
 
+/* about us style */
 .policiesContainer {
-    background-color: black;
+    background-color: #090e0a;
     background-image: url('Resources/policiesBackground.jpeg');
-    background-repeat: no-repeat;
     background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -105,26 +97,37 @@ textarea {
     background-position: center;
 }
 
+.teamContainer {
+    background-color: #0f0f0f;
+    background-image: url('Resources/backgroundVapor.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .separator {
     background-image: url('Resources/Background.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* about us style */
 
-
-
-.policiesContent {
-    background-color: black;
-
+/* used in many places */
+.customContainer {
+    background-image: url('Resources/Background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .myInput:focus {
     box-shadow: 0rem 0.5rem 0.5rem rgba(139, 0, 139, 0.75);
     border-color: rgb(139, 0, 139);
 }
+/* fin used in many places */
+
+/* not asigned */
 
 /* fin not asigned */
-
 
 /* removing styles */
 a {
@@ -135,5 +138,4 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-
 /* fin removing styles */
