@@ -1,5 +1,8 @@
 /* index style */
-
+.carImg {
+    height: 30rem;
+    object-fit: cover;
+}
 /* fin index style */
 
 /* contact us style */
