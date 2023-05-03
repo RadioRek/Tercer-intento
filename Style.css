@@ -13,6 +13,14 @@ textarea {
 
 /* fin contact us style */
 
+/* cart style */
+.notValid {
+
+    border: 2px solid red;
+
+}
+
+/* fin cart style */
 
 /* shop style */
 .shopArea {
