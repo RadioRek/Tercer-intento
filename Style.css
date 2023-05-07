@@ -3,6 +3,7 @@
     height: 30rem;
     object-fit: cover;
 }
+
 /* fin index style */
 
 /* contact us style */
@@ -49,6 +50,7 @@ textarea {
     color: whitesmoke;
     background-color: rgba(33, 37, 41, 0.75);
     cursor: pointer;
+    animation-fill-mode: forwards;
 }
 
 .myCardBlack:hover {
@@ -62,11 +64,18 @@ textarea {
     color: whitesmoke;
     background-color: rgba(108, 117, 125, 0.75);
     cursor: pointer;
+    animation-fill-mode: forwards;
 }
 
 .myCardGrey:hover {
     background-color: rgba(108, 117, 125, 1);
     box-shadow: 0.3rem 0.5rem 0.8rem rgba(139, 0, 139, 0.75);
+}
+
+@keyframes cardRotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
 /* obtained from web */
@@ -121,6 +130,7 @@ textarea {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /* about us style */
 
 /* used in many places */
@@ -134,6 +144,7 @@ textarea {
     box-shadow: 0rem 0.5rem 0.5rem rgba(139, 0, 139, 0.75);
     border-color: rgb(139, 0, 139);
 }
+
 /* fin used in many places */
 
 /* not asigned */
@@ -149,4 +160,5 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
 /* fin removing styles */

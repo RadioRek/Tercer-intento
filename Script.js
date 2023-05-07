@@ -65,4 +65,19 @@ $(document).ready(function () {
             $('#inputPostal').removeClass('notValid');
         }
     });
+
+    $('#danceButton').mousedown(function () {
+
+        $(".myCardBlack").css("animation", "1.5s linear 0s infinite cardRotate");
+        $(".myCardGrey").css("animation", "1.5s linear 0s infinite cardRotate");
+
+    })
+
+    $('#danceButton').mouseup(function () {
+
+        $(".myCardBlack").css("animation", "");
+        $(".myCardGrey").css("animation", "");
+
+    })
+
 });
