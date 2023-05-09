@@ -64,7 +64,6 @@ textarea {
     color: whitesmoke;
     background-color: rgba(108, 117, 125, 0.75);
     cursor: pointer;
-    animation-fill-mode: forwards;
 }
 
 .myCardGrey:hover {
