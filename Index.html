@@ -11,12 +11,11 @@
 <body>
     <div class="container-fluid customContainer p-0">
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark sticky-top" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top p-0" data-bs-theme="dark" id="myNavBar">
             <div class="container-fluid">
-                <a class="navbar-brand h1" href="Index.html">
-                    <img src="Resources/vaperLogo.png" alt="Logo" width="80" height="80"
+                <a class="navbar-brand h1 m-0 pt-2" href="Index.html">
+                    <img src="Resources/vaperLogo.png" alt="Logo" width="120" height="120"
                         class="d-inline-block align-text-center">
-                    VaperShop
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +23,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav h5">
-                        <li class="nav-item me-3 ms-5 ">
+                        <li class="nav-item mx-3">
                             <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
                         </li>
                         <li class="nav-item mx-3">
@@ -46,15 +45,19 @@
                             <a class="nav-link" id="clock"></a>
                         </li>
                     </ul>
+                    <li class="nav-item mx-3 d-flex align-items-center py-sm-2 ms-auto">
+                        <button type="button" class="btn btn-sm btn-outline-secondary me-3" id="lightButton">Light
+                            mode</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary me-3">Sign in</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Log in</button>
+                    </li>
                 </div>
-                <button type="button" class="btn btn-sm btn-outline-secondary me-3">Log in</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Sign in</button>
             </div>
         </nav>
         <!-- fin navbar -->
 
 
-        <!-- carousel -->   
+        <!-- carousel -->
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -66,10 +69,10 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="Resources/carousel1.jpeg" class="d-block w-100 carImg" alt="...">
+                    <img src="Resources/carousel2.jpg" class="d-block w-100 carImg" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="Resources/carousel2.jpg" class="d-block w-100 carImg" alt="...">
+                    <img src="Resources/carousel1.jpeg" class="d-block w-100 carImg" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="Resources/carousel3.jpg" class="d-block w-100 carImg" alt="...">
@@ -96,27 +99,26 @@
             <div class="row">
                 <div class="col-md-10 mx-auto">
                     <div class="card text-center text-bg-dark mb-2 mx-auto bg-opacity-75">
-                        <div class="card-header">
-                            Nasty is here!
-                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Here to bring new e-liquids</h5>
-                            <div class="container d-lg-flex align-items-center">
-                                <img src="Resources/Featured.jpeg" alt="" class="img-fluid">
-                                <p class="card-text ">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ad
-                                    voluptatem exercitationem incidunt, atque sequi autem voluptate natus quos est
-                                    itaque
-                                    accusantium debitis numquam expedita libero provident, quae doloribus ut.
-                                </p>
+                            <h5 class="card-title mb-3">Here to bring new e-liquids</h5>
+                            <div class="container row align-items-center mx-auto">
+                                <div class="col">
+                                    <img src="Resources/Featured.jpeg" alt="" class="img-fluid">
+                                </div>
+                                <div class="col">
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ad
+                                        voluptatem exercitationem incidunt, atque sequi autem voluptate natus quos est
+                                        itaque
+                                        accusantium debitis numquam expedita libero provident, quae doloribus ut.
+                                    </p>
+                                </div>
                             </div>
-
                             <!-- Button modal -->
-                            <button type="button" class="btn btn-secondary mt-2" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-secondary my-3" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">
                                 Modal here!
                             </button>
-
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
@@ -147,10 +149,10 @@
             <!--  fin featured content -->
 
             <!-- best sellers -->
-            <h1 class="h1 text-center text-bg-dark bg-opacity-75 rounded-3 mb-3">Best sellers</h1>
+            <h1 class="h1 text-center text-bg-dark bg-opacity-75 rounded-3 mb-3 py-3 tittle">Best sellers</h1>
             <div class="row">
                 <div class="col-md-3 mb-2">
-                    <div class="card text-center myCardBlack">
+                    <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
                         <img src="Resources/nastyLiquid.png" class="card-img-top img-fluid w-50 mx-auto pt-2" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -159,12 +161,11 @@
                                 libero maxime laudantium, minus autem laborum vero doloremque dicta? Cupiditate
                             </p>
                             <button type="button" class="btn btn-secondary">Secondary</button>
-
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 mb-2">
-                    <div class="card text-center myCardBlack">
+                    <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
                         <img src="Resources/nastyLiquid.png" class="card-img-top img-fluid w-50 mx-auto pt-2" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -176,7 +177,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 mb-2">
-                    <div class="card text-center myCardBlack">
+                    <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
                         <img src="Resources/nastyLiquid.png" class="card-img-top img-fluid w-50 mx-auto pt-2" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -189,7 +190,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 mb-2">
-                    <div class="card text-center myCardBlack">
+                    <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
                         <img src="Resources/nastyLiquid.png" class="card-img-top img-fluid w-50 mx-auto pt-2" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -202,36 +203,37 @@
                 </div>
             </div>
             <!-- fin best sellers -->
-
-
-
         </div>
 
-        <!-- footer -->
-        <footer class="bg-dark text-center text-bg-dark text-lg-start">
-            <div class="container p-4">
-                <div class="row">
-                    <div class="col-3">
-                        <h5 class="text-uppercase">Footer Content</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut sem euismod,
-                        </p>
-                    </div>
-                    <div class="col-6 text-center">
-                        <img src="Resources/nastyGif.gif" alt="" class="img-fluid w-50">
-                    </div>
-
-                    <div class="col-3">
-                        <h4>Contact Us</h4>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-map-marker-alt"></i> 123 Main St. Anytown, USA</li>
-                            <li><i class="fas fa-phone"></i> (555) 555-1234</li>
-                            <li><i class="fas fa-envelope"></i> info@mycompany.com</li>
-                        </ul>
-                    </div>
-                </div>
+<!-- footer -->
+<footer class="bg-dark text-center text-bg-dark text-lg-start" id="myFooter">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-3">
+                <h5 class="text-uppercase">Footer Content</h5>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut sem euismod,
+                </p>
             </div>
-            <!-- fin footer -->
+            <div class="col-6 text-center">
+                <img src="Resources/nastyGif.gif" alt="" class="img-fluid w-50">
+            </div>
+
+            <div class="col-3">
+                <h4>Contact Us</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Main St. Anytown, USA</li>
+                    <li><i class="fas fa-phone"></i> (555) 555-1234</li>
+                    <li><i class="fas fa-envelope"></i> info@mycompany.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        &copy; 2023 Your Company Name. All rights reserved.
+    </div>
+</footer>
+<!-- fin footer -->
     </div>
 
 

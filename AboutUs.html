@@ -10,12 +10,11 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark sticky-top bg-dark customNavbar" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top p-0" data-bs-theme="dark" id="myNavBar">
         <div class="container-fluid">
-            <a class="navbar-brand h1" href="Index.html">
-                <img src="Resources/vaperLogo.png" alt="Logo" width="80" height="80"
+            <a class="navbar-brand h1 m-0 pt-2" href="Index.html">
+                <img src="Resources/vaperLogo.png" alt="Logo" width="120" height="120"
                     class="d-inline-block align-text-center">
-                VaperShop
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav h5">
-                    <li class="nav-item me-3 ms-5 ">
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="Index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
@@ -45,9 +44,13 @@
                         <a class="nav-link" id="clock"></a>
                     </li>
                 </ul>
+                <li class="nav-item mx-3 d-flex align-items-center py-sm-2 ms-auto">
+                    <button type="button" class="btn btn-sm btn-outline-secondary me-3" id="lightButton">Light
+                        mode</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary me-3">Sign in</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Log in</button>
+                </li>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary me-3">Log in</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Sign in</button>
         </div>
     </nav>
     <!-- fin navbar -->
@@ -120,7 +123,7 @@
 
 
     <!-- footer -->
-    <footer class="bg-dark text-center text-bg-dark text-lg-start">
+    <footer class="bg-dark text-center text-bg-dark text-lg-start" id="myFooter">
         <div class="container p-4">
             <div class="row">
                 <div class="col-3">
@@ -143,7 +146,11 @@
                 </div>
             </div>
         </div>
-        <!-- fin footer -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            &copy; 2023 Your Company Name. All rights reserved.
+        </div>
+    </footer>
+    <!-- fin footer -->
 
 
 
