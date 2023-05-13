@@ -21,8 +21,11 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// adress form function
+
+
 $(document).ready(function () {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     $('#confirmButton').click(function () {
         let email = $('#inputEmail').val();
         let adress = $('#inputAddress').val();
@@ -127,11 +130,127 @@ $(document).ready(function () {
             $(".sidelink").removeClass("bg-light").addClass("bg-dark");
             $(".sidelink").removeClass("text-bg-light").addClass("text-bg-dark");
         }
+
+        if($('#cart').hasClass('bg-dark') || $('#cart').hasClass('text-bg-dark')){
+            $('#cart').removeClass('bg-dark').addClass('bg-light');
+            $('#cart').removeClass('text-bg-dark').addClass('text-bg-light');
+        } else {
+            $('#cart').removeClass('bg-light').addClass('bg-dark');
+            $('#cart').removeClass('text-bg-light').addClass('text-bg-dark');
+        }
+
+        if($('#cartTable').hasClass('table-dark')){
+            $('#cartTable').removeClass('table-dark');
+        } else {
+            $('#cartTable').addClass('table-dark');
+        }
     });
 
-    
+    $('.card-footer button').on('click', function () {
+        const card = $(this).closest('.card');
+        const productName = card.find('.card-body .card-title').text();
+        const productDescription = card.find('.card-body .card-text').text();
+        const productCode = parseInt(card.find('.card-body h6').text());
+        const productPriceString = card.find('.card-footer h4').text().replace('$', '').replace('.', '');
+        const productPrice = parseFloat(productPriceString);
+        let product =
+        {
+            code: productCode,
+            name: productName,
+            desc: productDescription,
+            price: productPrice,
+            quantity: 1
+        };
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let contains = false;
+        cart.forEach(element => {
+            if (element.code === productCode) {
+                element.quantity++;
+                contains = true;
+            }
+        });
+        if (!contains) {
+            cart.push(product);
+        }
+        $('#cartBodyOffCanvas').empty();
+        cart.forEach(element => {
+            var row = $("<tr><td><p>" + element.code
+                + "</p></td><td>"
+                + element.name + "</td><td>" + element.price * element.quantity
+                + "</td><td>" + element.quantity
+                + "</td><td><button class='btn btn-sm btn-danger' type='button' onClick='remove()'>Remove</button></td><td><button class='btn btn-sm btn-success' type='button' onClick='add()'>Add</button></td></tr>");
+
+            $('#cartBodyOffCanvas').append(row);
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
+    });
+
+    $('#emptyCart').on('click', function () {
+        localStorage.removeItem('cart');
+        $('#cartBodyOffCanvas').empty();
+    });
 });
 
+function remove() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let productCode = parseInt($(event.target).closest('tr').find('td p').text());
+    cart.forEach(element => {
+        if (element.code === productCode) {
+            element.quantity--;
+        }
+        if (element.quantity === 0) {
+            cart.splice(cart.indexOf(element), 1);
+        }
+    });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    $('#cartBodyOffCanvas').empty();
+    cart.forEach(element => {
+        var row = $("<tr><td><p>" + element.code
+            + "</p></td><td>"
+            + element.name + "</td><td>" + element.price * element.quantity
+            + "</td><td>" + element.quantity
+            + "</td><td><button class='btn btn-sm btn-danger' type='button' onClick='remove()'>Remove</button></td><td><button class='btn btn-sm btn-success' type='button' onClick='add()'>Add</button></td></tr>");
+        $('#cartBodyOffCanvas').append(row);
+    });
+}
 
+function add() {   
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let productCode = parseInt($(event.target).closest('tr').find('td p').text());
+    cart.forEach(element => {
+        if (element.code === productCode) {
+            element.quantity++;
+        }
+    });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    $('#cartBodyOffCanvas').empty();
+    cart.forEach(element => {
+        var row = $("<tr><td><p>" + element.code
+            + "</p></td><td>"
+            + element.name + "</td><td>" + element.price * element.quantity
+            + "</td><td>" + element.quantity
+            + "</td><td><button class='btn btn-sm btn-danger' type='button' onClick='remove()'>Remove</button></td><td><button class='btn btn-sm btn-success' type='button' onClick='add()'>Add</button></td></tr>");
+
+        $('#cartBodyOffCanvas').append(row);
+    });
+}
+
+
+
+// let cadenaString = JSON.stringify(array);
+// localStorage.setItem("miPrimerStorage", cadenaString);
+
+// let storage = localStorage.getItem("miPrimerStorage");
+// let obj = JSON.parse(storage);
+
+// let sku = parseInt(document.getElementById("sku").value);
+// let nombre = document.getElementById("nombre").value;
+// let precio = document.getElementById("precio").value;
+// let obj = [sku, nombre, precio];
+
+// let objs = JSON.parse(localStorage.getItem('miPrimerStorage')) || [];
+// objs.push(obj);
+
+// localStorage.setItem("miPrimerStorage", JSON.stringify(objs));
 
 

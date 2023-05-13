@@ -19,6 +19,13 @@ textarea {
 /* fin cart style */
 
 /* shop style */
+
+.offcanvas{
+    width:50% !important;
+}  
+
+
+
 .shopArea {
     background-image: url('Resources/nastyGif.gif');
     background-repeat: no-repeat;
