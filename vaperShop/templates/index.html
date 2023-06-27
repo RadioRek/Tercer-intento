@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Vaper Shop</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block body %}
+<!-- carousel -->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'img/carousel2.jpg' %}" class="d-block w-100 carImg" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/carousel1.jpeg' %}" class="d-block w-100 carImg" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/carousel3.jpg' %}" class="d-block w-100 carImg" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- fin carousel -->
+<!-- cards -->
+<div class="container overflow-auto pt-2">
+    <!-- featured content -->
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card text-center text-bg-dark mb-2 mx-auto bg-opacity-75">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Here to bring new e-liquids</h5>
+                    <div class="container row align-items-center mx-auto">
+                        <div class="col">
+                            <img src="{% static 'img/featured.jpeg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ad
+                                voluptatem exercitationem incidunt, atque sequi autem voluptate natus quos est
+                                itaque
+                                accusantium debitis numquam expedita libero provident, quae doloribus ut.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Button modal -->
+                    <button type="button" class="btn btn-secondary my-3" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Modal here!
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark border-0">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">More info about
+                                        featured!</h1>
+                                </div>
+                                <div class="modal-body bg-secondary border-0">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eaque hic
+                                    aspernatur magnam optio assumenda doloremque ipsum saepe esse illum numquam
+                                    quidem laboriosam consectetur sit, eveniet officia labore repudiandae sunt.
+                                </div>
+                                <div class="modal-footer bg-dark border-0">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-danger">Understood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  fin featured content -->
+
+    <!-- best sellers -->
+    <h1 class="h1 text-center text-bg-dark bg-opacity-75 rounded-3 mb-3 py-3 tittle">Best sellers</h1>
+    <div class="row">
+        <div class="col-md-3 mb-2">
+            <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
+                <img src="{% static 'img/nastyLiquid.png' %}" class="card-img-top img-fluid w-50 mx-auto pt-2"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+                        libero maxime laudantium, minus autem laborum vero doloremque dicta? Cupiditate
+                    </p>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
+                <img src="{% static 'img/nastyLiquid.png' %}" class="card-img-top img-fluid w-50 mx-auto pt-2"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+                    </p>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
+                <img src="{% static 'img/nastyLiquid.png' %}" class="card-img-top img-fluid w-50 mx-auto pt-2"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+                        aut qui, cum illum soluta beatae cumque! Error vero voluptatem consectetur
+                    </p>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="card text-center myCardBlack text-bg-dark bg-opacity-75">
+                <img src="{% static 'img/nastyLiquid.png' %}" class="card-img-top img-fluid w-50 mx-auto pt-2"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+                    </p>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin best sellers -->
+</div>
+<!-- fin cards -->
+
+{% endblock %}
+{% block js %}
+{% endblock %}

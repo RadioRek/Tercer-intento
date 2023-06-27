@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Administrator panel</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block body %}
+<!-- separator -->
+<section class="separator">
+    <h1 class="text-center text-white">Administrator panel</h1>
+    <br>
+    <br>
+    <h1 class="text-center text-white">Add category</h1>
+</section>
+<!-- fin separator -->
+<!-- add category table -->
+<table class="table table-dark table-bordered m-0">
+    <thead>
+        <tr>
+            <th scope="col">Category name</th>
+            <th scope="col">Add category</th>
+        </tr>
+    </thead>
+    <form method="POST">
+        {% csrf_token %}
+        <tbody>
+            <tr>
+                <td class="align-middle col-2">
+                    <input class="form-control myInput" type="text" name="categoryName" placeholder="Add Name">
+                </td>
+                <td class="text-center align-middle col-1">
+                    <input type="hidden" name="formType" value="category">
+                    <button class="btn btn-secondary">Add category</button>
+                </td>
+            </tr>
+        </tbody>
+    </form>
+</table>
+<!-- fin add category table -->
+<!-- separator -->
+<section class="separator">
+    <br>
+    <br>
+    <br>
+    <h1 class="text-center text-white">Add product</h1>
+</section>
+<!-- fin separator -->
+<!-- add product table -->
+<table class="table table-dark table-bordered m-0">
+    <thead>
+        <tr>
+            <th scope="col">Item name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Add image</th>
+            <th scope="col">Category</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Add item</th>
+        </tr>
+    </thead>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <tbody>
+            <tr>
+                <td class="align-middle col-1">
+                    <input class="form-control myInput" type="text" name="productName" placeholder="Add Name" required>
+                </td>
+                <td class="align-middle col-1">
+                    <input class="form-control myInput" type="number" name="price" placeholder="Add price" required>
+                </td>
+                <td class="align-middle col-2">
+                    <textarea class="form-control myInput" type="text" name="description" placeholder="Add description"
+                        style="height: 6rem;" required></textarea>
+                </td>
+                <td class="align-middle col-3">
+                    <input class="form-control myInput" type="file" data-bs-theme="dark" name="image" required>
+                </td>
+                <td class="align-middle col-2">
+                    <select class="form-select myInput" name="categoryID" required>
+                        {% if categories.count == 0 %}
+                        <option value="0">No categories found</option>
+                        {% endif %}
+                        {% for category in categories %}
+                            {% if category.id == 1 %}
+                            <option value="{{ category.id }}" selected>{{ category.name }}</option>
+                            {% else %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </td>
+                <td class="align-middle col-2">
+                    <input class="form-control myInput" type="number" name="stock" placeholder="Add stock" required>
+                </td>
+                <td class="text-center align-middle col-1">
+                    <input type="hidden" name="formType" value="item">
+                    <button class="btn btn-secondary">Add item</button>
+                </td>
+            </tr>
+        </tbody>
+    </form>
+</table>
+
+
+<!-- fin add product table -->
+<!-- separator -->
+<section class="separator">
+    <br>
+    <br>
+    <br>
+    <h1 class="text-center text-white">Products</h1>
+</section>
+<!-- fin separator -->
+<!-- products cards -->
+<div class="row justify-content-center">
+    {% for product in products %}
+    <div class="card mb-3 mx-1" style="max-width: 540px;">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-4">
+                <img src="{{product.image.url}}" class="img-fluid" alt="No img found">
+            </div>
+            <div class="col-md-8">
+                <form method="POST" enctype="multipart/form-data" id="productForm">
+                    {% csrf_token %}
+                    <div class="card-body text-center">
+                        <input class="form-control myInput mb-1" name="productID" value="{{product.id}}" readonly>
+                        <input class="form-control myInput mb-1" type="text" name="nameChange"
+                            placeholder="{{product.name}}" value="{{product.name}}" required>
+                        <input class="form-control myInput mb-1" type="number" name="priceChange"
+                            placeholder="{{product.price}}" value="{{product.price}}" required>
+                        <textarea class="form-control myInput mb-1" type="text" name="descriptionChange"
+                            style="height: 6rem;">{{product.description}}</textarea>
+                        <select class="form-select myInput mb-1" name="categoryChange" required>
+                            {% for category in categories %}
+                                {% if category.id == product.category.id %}
+                                    <option value="{{ category.id }}" selected>{{ category.name }}</option>
+                                {% else %}
+                                    <option value="{{ category.id }}">{{ category.name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <input class="form-control myInput mb-1" type="file" name="imageChange" value="{{product.image.url}}">
+                        <input class="form-control myInput mb-1" type="number" name="stockChange"
+                            placeholder="{{product.stock}}" value="{{product.stock}}" required>
+                        <input type="hidden" name="formType" value="change">
+                        <button class="btn btn-primary mt-1 editBtn" name="update">Change</button>
+                        <button class="btn btn-danger mt-1 deleteBtn" data-product-id="{{ product.id }}">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- fin products cards -->
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/admin.js' %}"></script>
+{% endblock %}

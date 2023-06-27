@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Vaper Shop</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block body %}
+<!-- policies -->
+<div class="container-fluid d-flex text-center justify-content-center policiesContainer">
+    <div class="container my-auto text-white">
+        <h1>Our policies</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore, laudantium distinctio cumque
+            sed
+            eveniet, ad hic necessitatibus illum pariatur in obcaecati blanditiis animi, expedita consequuntur!
+            Autem adipisci similique quisquam?</p>
+        <button class="btn btn-outline-info">Learn more</button>
+    </div>
+    <div class="container my-auto">
+        <img src="{% static 'img/vaperPolicies.png' %}" alt="" class="img-fluid w-auto">
+    </div>
+</div>
+<!-- fin policies -->
+
+<!-- separator -->
+<section class="separator">
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+<!-- fin separator -->
+
+<!-- quality -->
+<div class="container-fluid d-flex text-center justify-content-center qualityContainer">
+    <div class="container my-auto">
+        <img src="{% static 'img/qualityLogo.png' %}" alt="" class="img-fluid w-auto">
+    </div>
+    <div class="container my-auto text-white">
+        <h1>Quality</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore, laudantium distinctio cumque
+            sed
+            eveniet, ad hic necessitatibus illum pariatur in obcaecati blanditiis animi, expedita consequuntur!
+            Autem adipisci similique quisquam?</p>
+        <button class="btn btn-outline-info">Learn more</button>
+    </div>
+
+</div>
+<!-- fin quality -->
+
+<!-- separator -->
+<section class="separator">
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+<!-- fin separator -->
+
+<!-- team -->
+<div class="container-fluid d-flex text-center justify-content-center teamContainer">
+    <div class="container my-auto text-white">
+        <h1>Our team</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore, laudantium distinctio cumque
+            sed
+            eveniet, ad hic necessitatibus illum pariatur in obcaecati blanditiis animi, expedita consequuntur!
+            Autem adipisci similique quisquam?</p>
+        <button class="btn btn-outline-info">Learn more</button>
+    </div>
+    <div class="container my-auto">
+        <img src="{% static 'img/team.jpeg' %}" alt="" class="img-fluid w-auto rounded-pill">
+    </div>
+</div>
+<!-- fin team -->
+{% endblock %}
+{% block js %}
+{% endblock %}

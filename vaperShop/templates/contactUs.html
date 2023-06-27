@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Vaper Shop</title>
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container-fluid text-center px-0">
+    <!-- contact form -->
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label text-white">Email address</label>
+        <input type="email" class="form-control w-50 mx-auto bg-dark-subtle myInput" id="exampleFormControlInput1"
+            placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label text-white">What do u wanna know?</label>
+        <textarea class="form-control w-50 mx-auto bg-dark-subtle myInput" id="exampleFormControlTextarea1"
+            rows="3"></textarea>
+    </div>
+    <!-- fin contact form -->
+
+    <!-- newsletter -->
+    <div class="bg-secondary text-bg-secondary p-5">
+        <div class="container d-md-flex justify-content-between align-items-center">
+            <h3 class="mb-3 mb-md-0">Subscribe to our emails</h3>
+            <div class="input-group w-75">
+                <input type="text" class="form-control myInput" placeholder="Your email" aria-label="Your email"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-dark" type="button" id="button-addon2">Button</button>
+            </div>
+        </div>
+    </div>
+    <!-- fin newsletter -->
+</div>
+{% endblock %}
+{% block js %}
+{% endblock %}

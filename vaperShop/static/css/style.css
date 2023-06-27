@@ -4,91 +4,72 @@
     object-fit: cover;
 }
 /* fin index style */
-
 /* contact us style */
 textarea {
     height: 20rem;
     resize: none;
 }
 /* fin contact us style */
-
 /* cart style */
 .notValid {
     border: 2px solid red;
 }
 /* fin cart style */
-
 /* shop style */
-
-.offcanvas{
-    width:50% !important;
-}  
-
-
-
+.offcanvas {
+    width: 50% !important;
+}
 .shopArea {
-    background-image: url('Resources/nastyGif.gif');
+    background-image: url('img/nastyGif.gif');    
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-
 .customSidebar {
     width: 25%;
     min-width: 20%;
 }
-
 .sideItem {
     transition: background-color 0.3s ease;
 }
-
 .sideItem:hover {
     background-color: rgb(108, 117, 125) !important;
 }
-
 .myCardBlack {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
 }
-
 .myCardBlack:hover {
     box-shadow: 0.3rem 0.5rem 0.8rem rgba(139, 0, 139, 0.75);
 }
-
 .myCardGrey {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
 }
-
 .myCardGrey:hover {
     box-shadow: 0.3rem 0.5rem 0.8rem rgba(139, 0, 139, 0.75);
 }
-
 @keyframes cardRotate {
     100% {
         transform: rotateZ(360deg);
     }
 }
-
-    /* obtained from web */
-    .pagination .page-link {
-        color: #fff;
-        background-color: rgba(52, 58, 64, 0.8);
-        border-color: rgba(52, 58, 64, 0.8);
-    }
-
-    .pagination .page-link:hover {
-        background-color: rgba(96, 96, 96, 0.8);
-        border-color: rgba(96, 96, 96, 0.8);
-    }
-
-    .pagination .page-item.active .page-link {
-        background-color: rgba(96, 96, 96, 0.8);
-        border-color: rgba(96, 96, 96, 0.8);
-    }
-    /* fin obtained from web */
+/* obtained from web */
+.pagination .page-link {
+    color: #fff;
+    background-color: rgba(52, 58, 64, 0.8);
+    border-color: rgba(52, 58, 64, 0.8);
+}
+.pagination .page-link:hover {
+    background-color: rgba(96, 96, 96, 0.8);
+    border-color: rgba(96, 96, 96, 0.8);
+}
+.pagination .page-item.active .page-link {
+    background-color: rgba(96, 96, 96, 0.8);
+    border-color: rgba(96, 96, 96, 0.8);
+}
+/* fin obtained from web */
 /* fin shop style */
-
 /* about us style */
 .policiesContainer {
     background-color: #090e0a;
@@ -116,11 +97,10 @@ textarea {
     background-size: auto;
     background-position: center;
 }
-/* about us style */
-
+/* fin about us style */
 /* used in many places */
 .customContainer {
-    background-image: url('Resources/smokeBackground.jpg');
+    background-image: url('../img/smokeBackground.jpg');
     background-size: auto;
     background-position: center;
 }
@@ -129,10 +109,8 @@ textarea {
     border-color: rgb(139, 0, 139);
 }
 /* fin used in many places */
-
 /* not asigned */
 /* fin not asigned */
-
 /* removing styles */
 a {
     text-decoration: none;
@@ -142,4 +120,3 @@ ul {
     padding: 0;
 }
 /* fin removing styles */
-
