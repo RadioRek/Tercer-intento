@@ -172,9 +172,11 @@
                                 <li class="nav-item mx-2">
                                     <a class="nav-link" href="{% url 'cart' %}">Cart</a>
                                 </li>
+                                {% if user.is_authenticated and user.is_superuser %}
                                 <li class="nav-item mx-2">
                                     <a class="nav-link" href="{% url 'admin' %}">Administrator</a>
                                 </li>
+                                {% endif %}
                                 <li class="nav-item mx-2 align-items-center d-flex">
                                     <button type="button" class="btn btn-sm btn-outline-secondary me-3"
                                         id="lightButton">Light
